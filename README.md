@@ -3,6 +3,11 @@
 
 פרויקט זה מדגים בניית מחסן נתונים (DWH) מקצה לקצה ב-PostgreSQL, הכולל תהליכי ETL, הגדרת קשרי גומלין (Constraints) וביצוע שאילתות ניתוח עסקי מורכבות.
 
+## 🏗️ Database Architecture (ERD)
+כדי להמחיש את מבנה מחסן הנתונים, יצרתי תרשים ERD המציג את הקשרים בין טבלאות הממד (Dimensions) לטבלאות העובדות (Facts):
+
+![ERD Diagram](ERD_Diagram.png)
+
 
 💿 Dimensions (טבלאות ממד)
 Dim_Track
