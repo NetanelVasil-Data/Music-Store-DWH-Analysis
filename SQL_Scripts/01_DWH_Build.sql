@@ -76,7 +76,7 @@ SELECT
 FROM stg.invoice;
 
 
--- א. [cite_start]הגדרת מפתחות ראשיים (Primary Keys) 
+-- א. הגדרת מפתחות ראשיים (Primary Keys) 
 ALTER TABLE dwh.Dim_customer ADD PRIMARY KEY (customerid);
 ALTER TABLE dwh.Dim_employee ADD PRIMARY KEY (employeeid);
 ALTER TABLE dwh.Dim_track ADD PRIMARY KEY (trackid);
@@ -95,7 +95,7 @@ ALTER TABLE dwh.Fact_invoiceline
 ADD CONSTRAINT fk_line_invoice 
 FOREIGN KEY (invoiceid) REFERENCES dwh.Fact_invoice(invoiceid);
 
-[cite_start]-- קישור שורת חשבונית לשיר 
+-- קישור שורת חשבונית לשיר 
 ALTER TABLE dwh.Fact_invoiceline
 ADD CONSTRAINT fk_line_track 
 FOREIGN KEY (trackid) REFERENCES dwh.Dim_track(trackid);
