@@ -59,6 +59,7 @@ Fact_InvoiceLine
 
 
 🔍 Key Business Insights (SQL Analysis)
+
 הפרויקט עונה על שאלות עסקיות קריטיות באמצעות SQL מתקדם (CTEs, Window Functions):
 
 
