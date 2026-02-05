@@ -53,3 +53,24 @@ SELECT
     *,
     (unitprice * quantity) AS total_price 
 FROM stg.invoiceline;
+
+-- 5. ממד פלייליסטים: חיבור בין השירים לשמות הרשימות 
+CREATE TABLE dwh.Dim_playlist AS
+SELECT
+    pt.playlistid,
+    pt.trackid,
+    p.name AS playlist_name
+FROM stg.playlisttrack pt
+LEFT JOIN stg.playlist p ON pt.playlistid = p.playlistid;
+
+-- 6. טבלת עובדות ראשית: הזמנות 
+CREATE TABLE dwh.Fact_invoice AS
+SELECT 
+    invoiceid,
+    customerid,
+    [cite_start]invoicedate::DATE AS invoicedate, -- המרה לתאריך בלבד לצרכי DWH 
+    billingaddress,
+    billingcity,
+    billingcountry,
+    total
+FROM stg.invoice;
