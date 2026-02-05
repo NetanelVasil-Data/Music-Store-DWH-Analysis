@@ -12,7 +12,7 @@
 ## 📊 Visual Analysis & Insights
 חלק זה מציג ויזואליזציות מרכזיות שהופקו מתוך ה-Python Analysis Notebook, המשלבות נתונים ממחסן הנתונים עם ניתוח סטטיסטי:
 
-![Analysis Preview](Analysis_Preview.png)
+![Analysis Preview](analysispreview.png)
 
 
 
