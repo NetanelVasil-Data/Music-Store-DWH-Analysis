@@ -9,6 +9,14 @@
 ![ERD Diagram](ERD_Diagram.png)
 
 
+## 📊 Visual Analysis & Insights
+חלק זה מציג ויזואליזציות מרכזיות שהופקו מתוך ה-Python Analysis Notebook, המשלבות נתונים ממחסן הנתונים עם ניתוח סטטיסטי:
+
+![Analysis Preview](image.png)
+
+>  הגרף לעיל מדגים את היכולת לבצע אינטגרציה מלאה בין ה-DWH לבין כלי ויזואליזציה מתקדמים (Seaborn/Matplotlib) לצורך קבלת החלטות מבוססות נתונים.
+
+
 
 
 💿 Dimensions (טבלאות ממד)
