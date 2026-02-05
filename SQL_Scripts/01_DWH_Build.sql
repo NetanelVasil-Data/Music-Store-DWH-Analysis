@@ -74,3 +74,28 @@ SELECT
     billingcountry,
     total
 FROM stg.invoice;
+
+
+-- א. [cite_start]הגדרת מפתחות ראשיים (Primary Keys) 
+ALTER TABLE dwh.Dim_customer ADD PRIMARY KEY (customerid);
+ALTER TABLE dwh.Dim_employee ADD PRIMARY KEY (employeeid);
+ALTER TABLE dwh.Dim_track ADD PRIMARY KEY (trackid);
+ALTER TABLE dwh.Dim_playlist ADD PRIMARY KEY (playlistid, trackid); 
+ALTER TABLE dwh.Fact_invoice ADD PRIMARY KEY (invoiceid);
+ALTER TABLE dwh.Fact_invoiceline ADD PRIMARY KEY (invoicelineid);
+
+-- ב .הגדרת קשרי גומלין (Foreign Keys) 
+-- קישור חשבונית ללקוח 
+ALTER TABLE dwh.Fact_invoice
+ADD CONSTRAINT fk_invoice_customer 
+FOREIGN KEY (customerid) REFERENCES dwh.Dim_customer(customerid);
+
+-- קישור שורת חשבונית לחשבונית האם 
+ALTER TABLE dwh.Fact_invoiceline
+ADD CONSTRAINT fk_line_invoice 
+FOREIGN KEY (invoiceid) REFERENCES dwh.Fact_invoice(invoiceid);
+
+[cite_start]-- קישור שורת חשבונית לשיר 
+ALTER TABLE dwh.Fact_invoiceline
+ADD CONSTRAINT fk_line_track 
+FOREIGN KEY (trackid) REFERENCES dwh.Dim_track(trackid);
