@@ -10,7 +10,7 @@ Dim_Track
 
 תיאור: ישות אחת "רחבה" הכוללת את כל המידע על השיר.   
 
-לוגיקה: דה-נורמליזציה של ז'אנרים, אמנים ואלבומים. [cite_start]שינוי שמות עמודות (track_name, artist_name) לבהירות [cite_start]וחישוב משך שיר בפורמט קריא (MM:SS) .   
+לוגיקה: דה-נורמליזציה של ז'אנרים, אמנים ואלבומים. שינוי שמות עמודות (track_name, artist_name) לבהירות וחישוב משך שיר בפורמט קריא (MM:SS) .   
 
 Dim_Customer
 
@@ -19,7 +19,7 @@ Dim_Customer
 
 
 
-לוגיקה: האחדת פורמט שמות (Capitalization) באמצעות INITCAP [cite_start]וחילוץ דומיין האימייל לניתוח שיווקי.   
+לוגיקה: האחדת פורמט שמות (Capitalization) באמצעות INITCAP וחילוץ דומיין האימייל לניתוח שיווקי.   
 
 Dim_Employee
 
@@ -28,7 +28,7 @@ Dim_Employee
 תיאור: נתוני עובדים והיררכיה ארגונית.   
 
 
-לוגיקה: העשרת נתונים עם תקציב מחלקתי [cite_start], חישוב ותק בשנים [cite_start]והגדרת דגל is_manager לזיהוי מנהלים בארגון.   
+לוגיקה: העשרת נתונים עם תקציב מחלקתי , חישוב ותק בשנים והגדרת דגל is_manager לזיהוי מנהלים בארגון.   
 
 Dim_Playlist
 
@@ -55,7 +55,21 @@ Fact_InvoiceLine
 
 
 
-תיאור: פירוט הפריטים שנרכשו בכל הזמנה (Granularity ברמת השיר).   
+תיאור: פירוט הפריטים שנרכשו בכל הזמנה (Granularity ברמת השיר). 
+
+
+
+🔍 Key Business Insights (SQL Analysis)
+הפרויקט עונה על שאלות עסקיות קריטיות באמצעות SQL מתקדם (CTEs, Window Functions):
+
+
+ניתוח צמיחה: חישוב אחוזי גדילה בהכנסות של עובדים משנה לשנה באמצעות LAG.   
+
+
+פילוח מדינות: זיהוי 5 המדינות המובילות בהכנסות תוך המרת מטבע לשקל (ILS).   
+
+
+ביצועי מוצרים: סיווג שירים לפי נפח מכירות (0, 1-5, 6-10, 10+).
 
 
 
