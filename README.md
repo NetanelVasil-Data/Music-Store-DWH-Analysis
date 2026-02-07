@@ -1,4 +1,4 @@
-# Music-Store-DWH-Analysis
+# Music Store DWH - SQL & Python Analysis
 📊 Music Store Data Warehouse & Business Intelligence
 
 פרויקט זה מדגים בניית מחסן נתונים (DWH) מקצה לקצה ב-PostgreSQL, הכולל תהליכי ETL, הגדרת קשרי גומלין (Constraints) וביצוע שאילתות ניתוח עסקי מורכבות.
